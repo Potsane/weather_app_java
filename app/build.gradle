@@ -1,5 +1,9 @@
 apply plugin: 'com.android.application'
 
+project.ext {
+    daggerVersion = "2.13"
+    arch_version = '1.1.1'
+}
 android {
     compileSdkVersion 26
     defaultConfig {
@@ -25,4 +29,21 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
+    //dagger
+    implementation "com.google.dagger:dagger:${daggerVersion}"
+    implementation "com.google.dagger:dagger-android:${daggerVersion}"
+    implementation "com.google.dagger:dagger-android-support:${daggerVersion}"
+    annotationProcessor "com.google.dagger:dagger-compiler:${daggerVersion}"
+    annotationProcessor "com.google.dagger:dagger-android-processor:${daggerVersion}"
+    androidTestAnnotationProcessor "com.google.dagger:dagger-compiler:${daggerVersion}"
+
+    //aarchitecture
+    implementation "android.arch.lifecycle:extensions:${arch_version}"
+    annotationProcessor "android.arch.lifecycle:compiler:${arch_version}"
+    annotationProcessor "android.arch.persistence.room:compiler:1.1.0-alpha1"
+
+    //timber and 310
+    compile 'com.jakewharton.threetenabp:threetenabp:1.0.5'
+    compile 'com.jakewharton.timber:timber:4.6.0'
 }
