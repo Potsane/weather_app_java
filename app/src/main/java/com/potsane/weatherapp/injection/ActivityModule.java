@@ -1,6 +1,6 @@
 package com.potsane.weatherapp.injection;
 
-import com.potsane.weatherapp.view.WeatherActivity;
+import com.potsane.weatherapp.view.CurrentWeatherActivity;
 
 import dagger.Module;
 import dagger.android.ContributesAndroidInjector;
@@ -13,5 +13,5 @@ import dagger.android.ContributesAndroidInjector;
 public abstract class ActivityModule {
 
     @ContributesAndroidInjector
-    abstract WeatherActivity bindWeatherActivity();
+    abstract CurrentWeatherActivity bindCurrentWeatherActivity();
 }
