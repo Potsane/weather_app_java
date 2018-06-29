@@ -16,5 +16,4 @@ public class ForecastWeatherFragment extends Fragment {
         return inflater.inflate(R.layout.fragment_forecast_weather, container, false);
     }
 
-
 }
